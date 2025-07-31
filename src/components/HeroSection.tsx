@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const HeroSection = () => {
@@ -19,9 +20,11 @@ const HeroSection = () => {
           <p className="text-2xl text-text-dark mb-8 font-medium">
             Affordable Home Furnishing
           </p>
-          <Button size="lg" className="bg-brand-red hover:bg-brand-red/90 text-clean-white px-8 py-4 text-lg rounded-full">
-            Browse Products
-          </Button>
+          <Link to="/shop">
+            <Button size="lg" className="bg-brand-red hover:bg-brand-red/90 text-clean-white px-8 py-4 text-lg rounded-full">
+              Browse Products
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
