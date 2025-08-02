@@ -1,36 +1,8 @@
 import ProductCard from "@/components/ProductCard";
-import deskBlack from "@/assets/desk-black.jpg";
-import deskWood from "@/assets/desk-wood.jpg";
-import deskWhite from "@/assets/desk-white.jpg";
-import deskGlass from "@/assets/desk-glass.jpg";
+import { getFeaturedProducts } from "@/data/products";
 
 const ProductGrid = () => {
-  const products = [
-    {
-      id: 1,
-      image: deskBlack,
-      title: "Office Desk - Style 3",
-      isNew: false
-    },
-    {
-      id: 2,
-      image: deskWood,
-      title: "Office Desk - Style 2",
-      isNew: false
-    },
-    {
-      id: 3,
-      image: deskWhite,
-      title: "Office Desk - Style 1",
-      isNew: false
-    },
-    {
-      id: 4,
-      image: deskGlass,
-      title: "Glass Office Desk",
-      isNew: true
-    }
-  ];
+  const products = getFeaturedProducts(4);
 
   return (
     <section className="py-16 bg-clean-white">
@@ -39,6 +11,7 @@ const ProductGrid = () => {
           {products.map((product) => (
             <ProductCard
               key={product.id}
+              id={product.id}
               image={product.image}
               title={product.title}
               isNew={product.isNew}

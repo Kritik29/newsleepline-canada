@@ -3,7 +3,7 @@ import { MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
-  const storeAddress = "21 Signal Hill Ave, St. John's, NL, Canada";
+  const storeAddress = "21 Signal Hill Ave, Etobicoke, ON, M9W 6V8, Canada";
   const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(storeAddress)}`;
 
   return (

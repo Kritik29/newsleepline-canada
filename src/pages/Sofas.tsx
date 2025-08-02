@@ -1,19 +1,9 @@
 import Header from "@/components/Header";
 import ProductCard from "@/components/ProductCard";
-import deskBlack from "@/assets/desk-black.jpg";
-import deskWood from "@/assets/desk-wood.jpg";
-import deskWhite from "@/assets/desk-white.jpg";
-import deskGlass from "@/assets/desk-glass.jpg";
+import { getProductsByCategory } from "@/data/products";
 
 const Sofas = () => {
-  const sofaProducts = [
-    { id: 1, image: deskWood, title: "3-Seater Sofa", isNew: false },
-    { id: 2, image: deskWhite, title: "L-Shaped Sectional", isNew: true },
-    { id: 3, image: deskGlass, title: "Leather Recliner", isNew: false },
-    { id: 4, image: deskBlack, title: "Modern Loveseat", isNew: false },
-    { id: 5, image: deskWood, title: "Corner Sofa Set", isNew: true },
-    { id: 6, image: deskWhite, title: "Fabric Armchair", isNew: false },
-  ];
+  const sofaProducts = getProductsByCategory("sofas");
 
   return (
     <div className="min-h-screen bg-clean-white">
@@ -26,6 +16,7 @@ const Sofas = () => {
           {sofaProducts.map((product) => (
             <ProductCard
               key={product.id}
+              id={product.id}
               image={product.image}
               title={product.title}
               isNew={product.isNew}

@@ -1,15 +1,56 @@
 import Header from "@/components/Header";
 import { Card, CardContent } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 const More = () => {
+  const navigate = useNavigate();
+  
   const categories = [
-    { title: "Office Furniture", description: "Desks, chairs, and storage solutions" },
-    { title: "Living Room", description: "Coffee tables, TV stands, and decor" },
-    { title: "Bedroom", description: "Nightstands, dressers, and wardrobes" },
-    { title: "Storage", description: "Shelving units and organizers" },
-    { title: "Lighting", description: "Lamps and light fixtures" },
-    { title: "Decor", description: "Rugs, cushions, and accessories" },
+    { 
+      title: "Mirrors", 
+      description: "Wall mirrors and decorative mirrors",
+      route: "/mirrors"
+    },
+    { 
+      title: "Coffee Tables", 
+      description: "Coffee tables and side tables",
+      route: "/coffee-tables"
+    },
+    { 
+      title: "Console Tables", 
+      description: "Console tables and entryway furniture",
+      route: "/console-tables"
+    },
+    { 
+      title: "Accents", 
+      description: "Accent chairs",
+      route: "/accents"
+    },
+    { 
+      title: "Accessories", 
+      description: "Home accessories and decor items",
+      route: "/accessories"
+    },
+    { 
+      title: "Entertainment", 
+      description: "TV stands and entertainment centers",
+      route: "/entertainment"
+    },
+    { 
+      title: "Office Furniture", 
+      description: "Desks, chairs, and storage solutions",
+      route: "/office-furniture"
+    },
+    { 
+      title: "Kitchen Cabinets and Appliances", 
+      description: "Custom kitchen cabinetry and small kitchen appliances available upon request.",
+      route: "/kitchen-cabinets-appliances"
+    },
   ];
+
+  const handleCategoryClick = (route: string) => {
+    navigate(route);
+  };
 
   return (
     <div className="min-h-screen bg-clean-white">
@@ -20,7 +61,11 @@ const More = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 cursor-pointer">
+            <Card 
+              key={index} 
+              className="hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+              onClick={() => handleCategoryClick(category.route)}
+            >
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-text-dark mb-2">{category.title}</h3>
                 <p className="text-text-light">{category.description}</p>

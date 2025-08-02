@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "@/assets/backgrounds/hero-background.jpg";
 
 const HeroSection = () => {
   return (
