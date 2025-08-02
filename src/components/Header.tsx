@@ -1,6 +1,6 @@
-import { Search, Instagram } from "lucide-react";
+
+import { Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
@@ -17,6 +17,7 @@ const Header = () => {
             <div>
               <h1 className="text-xl font-bold text-text-dark">New Sleep Line Canada</h1>
               <p className="text-sm text-text-light">Your #1 Home Furnishing Choice</p>
+              <p className="text-sm text-text-light">21 Signal Hill Ave</p>
             </div>
           </Link>
 
@@ -59,15 +60,8 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Search and Social */}
-          <div className="flex items-center space-x-4">
-            <div className="relative hidden md:block">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-light w-4 h-4" />
-              <Input 
-                placeholder="Search..." 
-                className="pl-10 w-48"
-              />
-            </div>
+          {/* Social */}
+          <div className="flex items-center">
             <Button variant="ghost" size="icon">
               <Instagram className="w-5 h-5" />
             </Button>
