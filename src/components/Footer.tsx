@@ -33,7 +33,7 @@ const Footer = () => {
           {/* Google Maps Embed */}
           <div className="h-64 lg:h-80 rounded-lg overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2816.5!2d-52.7!3d47.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0ca38e6b0f6b6b%3A0x6b6b6b6b6b6b6b6b!2s21%20Signal%20Hill%20Ave%2C%20St.%20John's%2C%20NL%2C%20Canada!5e0!3m2!1sen!2sca!4v1234567890"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=21+Signal+Hill+Ave,+Etobicoke,+ON+M9W+6V8,+Canada"
               width="100%"
               height="100%"
               style={{ border: 0 }}

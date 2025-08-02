@@ -84,12 +84,14 @@ const ProductCarousel = () => {
               {visibleProducts.map((product, index) => (
                 <div key={`${product.id}-${currentIndex}-${index}`} className="flex-shrink-0">
                   <div className="w-80">
-                    <ProductCard
-                      id={product.id}
-                      image={product.image}
-                      title={product.title}
-                      isNew={product.isNew}
-                    />
+                                          <ProductCard
+                        id={product.id}
+                        image={product.image}
+                        title={product.title}
+                        isNew={product.isNew}
+                        isTopSeller={product.isTopSeller}
+                        isCanadianMade={product.isCanadianMade}
+                      />
                   </div>
                 </div>
               ))}

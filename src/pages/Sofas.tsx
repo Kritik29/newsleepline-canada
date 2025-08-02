@@ -20,6 +20,8 @@ const Sofas = () => {
               image={product.image}
               title={product.title}
               isNew={product.isNew}
+              isTopSeller={product.isTopSeller}
+              isCanadianMade={product.isCanadianMade}
             />
           ))}
         </div>

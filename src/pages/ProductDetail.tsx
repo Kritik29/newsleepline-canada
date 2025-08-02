@@ -1,37 +1,61 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { ArrowLeft, Phone, MapPin, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
-import { getProductById, categoryNames, getProductsByCategory } from "@/data/products";
+import { getProductById, categoryNames, getProductsByCategory, allProducts } from "@/data/products";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const product = getProductById(id || "");
   const currentCategory = product?.category || "";
-  const categoryProducts = getProductsByCategory(currentCategory);
-  const currentIndex = categoryProducts.findIndex(p => p.id === id);
   
-  const prevProduct = currentIndex > 0 ? categoryProducts[currentIndex - 1] : null;
-  const nextProduct = currentIndex < categoryProducts.length - 1 ? categoryProducts[currentIndex + 1] : null;
+  // Check if user came from "All Products" page or a specific category page
+  const cameFromAllProducts = location.state?.fromAllProducts || false;
+  
+  // Get the appropriate product list and current index
+  let productList, currentIndex;
+  
+  if (cameFromAllProducts) {
+    // If from "All Products" page, navigate through all products
+    productList = allProducts;
+    currentIndex = productList.findIndex(p => p.id === id);
+  } else {
+    // If from category page, navigate within that category only
+    productList = getProductsByCategory(currentCategory);
+    currentIndex = productList.findIndex(p => p.id === id);
+  }
+  
+  const prevProduct = currentIndex > 0 ? productList[currentIndex - 1] : null;
+  const nextProduct = currentIndex < productList.length - 1 ? productList[currentIndex + 1] : null;
 
   const handlePrevProduct = () => {
     if (prevProduct) {
-      navigate(`/product/${prevProduct.id}`);
+      navigate(`/product/${prevProduct.id}`, { 
+        state: { fromAllProducts: cameFromAllProducts } 
+      });
     }
   };
 
   const handleNextProduct = () => {
     if (nextProduct) {
-      navigate(`/product/${nextProduct.id}`);
+      navigate(`/product/${nextProduct.id}`, { 
+        state: { fromAllProducts: cameFromAllProducts } 
+      });
     }
   };
 
   const handleBackToProducts = () => {
-    // Navigate to the category page based on the current product's category
-    const categoryRoute = getCategoryRoute(currentCategory);
-    navigate(categoryRoute);
+    if (cameFromAllProducts) {
+      // If came from "All Products", go back to shop page
+      navigate("/shop");
+    } else {
+      // If came from category page, go back to that category
+      const categoryRoute = getCategoryRoute(currentCategory);
+      navigate(categoryRoute);
+    }
   };
 
   const getCategoryRoute = (category: string): string => {
@@ -124,7 +148,7 @@ const ProductDetail = () => {
                   <ChevronLeft className="w-5 h-5" />
                 </Button>
                 <span className="text-sm text-text-light px-2">
-                  {currentIndex + 1} of {categoryProducts.length}
+                  {currentIndex + 1} of {productList.length}
                 </span>
                 <Button
                   variant="outline"

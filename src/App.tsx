@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Beds from "./pages/Beds";
 import Sofas from "./pages/Sofas";
@@ -27,39 +27,40 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/beds" element={<Beds />} />
-          <Route path="/sofas" element={<Sofas />} />
-          <Route path="/dining" element={<Dining />} />
-          <Route path="/more" element={<More />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/office-furniture" element={<OfficeFurniture />} />
-          <Route path="/living-room" element={<LivingRoom />} />
-          <Route path="/bedroom" element={<Bedroom />} />
-          <Route path="/storage" element={<Storage />} />
-          <Route path="/lighting" element={<Lighting />} />
-          <Route path="/decor" element={<Decor />} />
-          <Route path="/mirrors" element={<Mirrors />} />
-          <Route path="/coffee-tables" element={<CoffeeTables />} />
-          <Route path="/console-tables" element={<ConsoleTables />} />
-          <Route path="/accents" element={<Accents />} />
-          <Route path="/accessories" element={<Accessories />} />
-          <Route path="/entertainment" element={<Entertainment />} />
-          <Route path="/kitchen-cabinets-appliances" element={<KitchenCabinetsAppliances />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <Router basename={process.env.NODE_ENV === 'production' ? '/newsleepline-canada' : ''}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/beds" element={<Beds />} />
+            <Route path="/sofas" element={<Sofas />} />
+            <Route path="/dining" element={<Dining />} />
+            <Route path="/more" element={<More />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/office-furniture" element={<OfficeFurniture />} />
+            <Route path="/living-room" element={<LivingRoom />} />
+            <Route path="/bedroom" element={<Bedroom />} />
+            <Route path="/storage" element={<Storage />} />
+            <Route path="/lighting" element={<Lighting />} />
+            <Route path="/decor" element={<Decor />} />
+            <Route path="/mirrors" element={<Mirrors />} />
+            <Route path="/coffee-tables" element={<CoffeeTables />} />
+            <Route path="/console-tables" element={<ConsoleTables />} />
+            <Route path="/accents" element={<Accents />} />
+            <Route path="/accessories" element={<Accessories />} />
+            <Route path="/entertainment" element={<Entertainment />} />
+            <Route path="/kitchen-cabinets-appliances" element={<KitchenCabinetsAppliances />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Router>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+}
 
 export default App;
