@@ -30,6 +30,28 @@ import melrose_cf from "@/assets/products/beds/16-melrose_cf.avif";
 import platinum_cf from "@/assets/products/beds/17-platinum_cf.avif";
 import silvy_cf from "@/assets/products/beds/18-silvy_cf.avif";
 import valencia_cf from "@/assets/products/beds/19-valencia_cf.avif";
+import kroma_fabric_bed_beige_xc from "@/assets/products/beds/20-kroma-beige-xc.avif";
+import kroma_fabric_bed_black_xc from "@/assets/products/beds/21-kroma-fabric-bed-black-xc.avif";
+import kroma_velvet_bed_xc from "@/assets/products/beds/22-kroma-velvet-bed-xc.avif";
+import kroma_leather_bed_xc from "@/assets/products/beds/23-kroma-leather-bed-xc.avif";
+import sierra_velvet_grey_xc from "@/assets/products/beds/24-sierra-velvet-grey-xc.avif";
+import sierra_velvet_charcoal_xc from "@/assets/products/beds/25-sierra-velvet-charcoal-xc.avif";
+import sierra_leather_xc from "@/assets/products/beds/26-sierra-leather-xc.avif";
+import blue_velvet_pillar_xc from "@/assets/products/beds/27-blue-pillar-xc.avif";
+import ck1682k from "@/assets/products/beds/28-1682K-1CK.avif";
+import ck1646k from "@/assets/products/beds/29-1646K-1CK.avif";
+import ck1681k from "@/assets/products/beds/30-1681K-1CK.avif";
+import t2152 from "@/assets/products/beds/31-t2152.avif";
+import feli from "@/assets/products/beds/32-feli.avif";
+import r168_charcoal from "@/assets/products/beds/33-r168-charcoal.avif";
+import r168_grey from "@/assets/products/beds/34-r168-grey.avif";
+import embassy from "@/assets/products/beds/35-embassy.avif";
+import if5600 from "@/assets/products/beds/36-if-5600.avif";
+import if195 from "@/assets/products/beds/37-if-195.avif";
+import if5750 from "@/assets/products/beds/38-if-5750.avif";
+import if5891 from "@/assets/products/beds/39-if-5891.avif";
+import if130e from "@/assets/products/beds/40-if-130e.avif";
+import if176 from "@/assets/products/beds/41-if-176.avif";
 
 //import office furniture
 import deskBlack from "@/assets/products/office-furniture/desk-black.jpg";
@@ -88,8 +110,35 @@ export const allProducts: Product[] = [
   { id: "31", title: "Platinum CF", image: platinum_cf, category: "beds", isTopSeller: false, description: "This bed features a perfect blend between traditional design and modern functionality, this bed is a great choice. Available in Queen and King."},
   { id: "32", title: "Silvy CF", image: silvy_cf, category: "beds", isTopSeller: false, description: "This bed provides an elegant blend of traditional and modern beds. Designed with gothic architecture in mind, this bed is the right choice."},
   { id: "33", title: "Valencia CF", image: valencia_cf, category: "beds", isNew: true, description: "Smooth, clean, and elegant - just how life should be. This sleek bed is the perfect addition to your modern bedroom."},
-  
-  
+  { id: "34", title: "Kroma Fabric Beige XC", image: kroma_fabric_bed_beige_xc, category: "beds", isCanadianMade: true, description: "High quality, Canadian made bed. Available in Queen and King. Available in 2 different colours. Shipping and assembly available. "},
+  { id: "35", title: "Kroma Fabric Black XC", image: kroma_fabric_bed_black_xc, category: "beds", isCanadianMade: true, description: "High quality, Canadian made bed. Available in Queen and King. Available in 2 different colours. Shipping and assembly available. "},
+  { id: "36", title: "Kroma Velvet XC", image: kroma_velvet_bed_xc, category: "beds", isCanadianMade: true, description: "High quality, Canadian made bed. Available in Queen and King. Shipping and assembly available. "},
+  { id: "37", title: "Kroma Leather XC", image: kroma_leather_bed_xc, category: "beds", isCanadianMade: true, description: "High quality, Canadian made. White leatherette finish. Available in Queen and King. Shipping and assembly available. "},
+  { id: "38", title: "Sierra Velvet Grey XC", image: sierra_velvet_grey_xc, category: "beds", isCanadianMade: true, description: "High quality, Canadian made. Available in Grey and Charcoal. Available in Queen and King. Shipping and assembly available. "},
+  { id: "39", title: "Sierra Velvet Charcoal XC", image: sierra_velvet_charcoal_xc, category: "beds", isCanadianMade: true, description: "High quality, Canadian made. Available in Grey and Charcoal. Available in Queen and King. Shipping and assembly available. "},
+  { id: "40", title: "Sierra Leather XC", image: sierra_leather_xc, category: "beds", isCanadianMade: true, description: "High quality, Canadian made. Available in Queen and King. Shipping and assembly available. "},
+  { id: "41", title: "Blue Velvet Pillar Bed XC", image: blue_velvet_pillar_xc, category: "beds", isCanadianMade: true, description: "Treat yourself like royalty with this modern pillar bed. Canadian made, with high quality velvet. Shipping and assembly available. "},
+  { id: "42", title: "1682K-1CK", image: ck1682k, category: "beds", isNew: true, description: "The elegant profile of the Heath Court Collection is comprised of classic elements that have been combined to create the perfect addition to your home’s traditional décor. The formal styling of the California King bed includes classic elements such routed edges and decorative wood grain. The neutral hued brown button-tufted fabric of the headboard sets the tone for the refined presentation of the wood framing of the bed. The white oak veneer that graces the collection is highlighted with a brown oak finish. Delivery also available."},
+  { id: "43", title: "1646K-1CK", image: ck1646k, category: "beds", isNew: true, description: "The reflection of your glamorous image is one of striking style and classic sophistication, all illuminated by the boldly designed Avondale Collection. Mirrored framing immediately draws your eye to the modern-traditional profile. The silver finish of the collection is enhanced by the contrasting silver-gray crystal button-tufted accents on the headboard and footboard. Delivery available across GTA."},
+  { id: "44", title: "1681K-1CK", image: ck1681k, category: "beds", isNew: false, description: "Dramatically styled for your opulent home, the Brigette Collection’s magnificent profile is the perfect complement to your decorative preference. Traditional accenting abounds acanthus leaf motif, while modern flair creates stunning impact – silver-gray finish, pleated dark gray bi-cast vinyl crystal-tufted head, dramatic framing – culminating in the exquisite presentation before you. Delivery also available."},
+  { id: "45", title: "T2152", image: t2152, category: "beds", isNew: true, description: "The prefect storage solution, this platform bed offers 2 footboard drawers, 2 side drawers, and is draped in beautiful charcoal grey, linen-style fabric. The contemporary design includes deep button tufting and clean lines. Drawers include full extension metal glides. Delivery available across GTA."},
+  { id: "46", title: "Feli", image: feli, category: "beds", description: "The practical design combines extra deep drawers for plenty of storage space. Functional and modern, it will allow you to make the most of the available floor space in your bedroom. 4 footboard drawers, 2 rail drawers, and 2 headboard drawers. Platform bed, made of solid woods and veneers. Bedroom set includes bed, dresser/mirror, 2 (two) nightstands and chest. Wood, veneers- black, with antiqued, brass hardware. Delivery also available."},
+  { id: "47", title: "R168 Charcoal", image: r168_charcoal, category: "beds", isCanadianMade: true, description: "A stunning display of craftsmanship, this hand built, Canadian made bed is the perfect addition to any bedroom needing a boost of style and sophistication. With bevelled edges, button tufting in a diamond pattern, and nailhead borders, this bed is a masterpiece of design."},
+  { id: "48", title: "R168 Grey", image: r168_grey, category: "beds", isCanadianMade: true, description: "A stunning display of craftsmanship, this hand built, Canadian made bed is the perfect addition to any bedroom needing a boost of style and sophistication. With bevelled edges, button tufting in a diamond pattern, and nailhead borders, this bed is a masterpiece of design."},
+  { id: "49", title: "Embassy", image: embassy, category: "beds"},
+  { id: "50", title: "IF5600", image: if5600, category: "beds", isTopSeller: true, description: "Velvet Fabric Bed available in Gray, Blue, Cream colour. A perfect blend of modern design and traditional aesthetic, this bed has it all. Available in Queen and King."},
+  { id: "51", title: "IF195", image: if195, category: "beds", isCanadianMade: true, isTopSeller: true, description: "Treat yourself like royalty with this modern pillar bed. Canadian made, with high quality velvet. Shipping and assembly available. "},
+  { id: "52", title: "IF5750", image: if5750, category: "beds", isTopSeller: true, description: "Sleek, elegant, and minimalistic design are the cornerstones of this bed. Easy decor, easy living. Available in Queen and King."},
+  { id: "53", title: "IF5891", image: if5891, category: "beds", isTopSeller: true, description: "High style on a budget, this bed is fashionable and fit for any room. Available in Queen and King."},
+  { id: "54", title: "IF130E", image: if130e, category: "beds", isTopSeller: true, description: "A perfect blend of modern design and traditional aesthetic, this bed has it all. Available for delivery."},
+  { id: "55", title: "IF176", image: if176, category: "beds", isTopSeller: true, description: "Smooth, clean, and elegant - just how life should be. This sleek bed is the perfect addition to your modern bedroom."}
+
+
+
+
+
+
+
   // Sofa Products
   // { id: "7", title: "3-Seater Sofa", image: deskWood, category: "sofas", isNew: false, isTopSeller: true, isCanadianMade: true, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
   // { id: "8", title: "L-Shaped Sectional", image: deskWhite, category: "sofas", isNew: true, isTopSeller: true, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
