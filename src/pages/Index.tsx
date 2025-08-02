@@ -1,7 +1,7 @@
 
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import ProductGrid from "@/components/ProductGrid";
+import ProductCarousel from "@/components/ProductCarousel";
 import Footer from "@/components/Footer";
 import { Phone, MapPin, Clock, Mail } from "lucide-react";
 
@@ -10,7 +10,7 @@ const Index = () => {
     <div className="min-h-screen bg-clean-white">
       <Header />
       <HeroSection />
-      <ProductGrid />
+      <ProductCarousel />
       
       {/* Contact Us Section */}
       <section className="py-16 bg-gray-50">
