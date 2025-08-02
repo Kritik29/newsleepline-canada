@@ -1,7 +1,8 @@
 
-import { Instagram } from "lucide-react";
+import { Instagram, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 const Header = () => {
   const location = useLocation();
@@ -60,8 +61,13 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Social */}
-          <div className="flex items-center">
+          {/* Mobile Menu & Social */}
+          <div className="flex items-center space-x-2">
+            {/* Mobile Menu Button */}
+            <SidebarTrigger className="md:hidden">
+              <Menu className="w-5 h-5" />
+            </SidebarTrigger>
+            
             <Button variant="ghost" size="icon">
               <Instagram className="w-5 h-5" />
             </Button>
