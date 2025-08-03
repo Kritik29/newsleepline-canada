@@ -35,9 +35,9 @@ function App() {
         <Sonner />
         <Router>
           <Routes>
-            <Route path="/" element={<Shop />} />
-            <Route path="/all" element={<Index />} />
+            <Route path="/" element={<Index />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/all" element={<Shop />} />
             <Route path="/beds" element={<Beds />} />
             <Route path="/sofas" element={<Sofas />} />
             <Route path="/dining" element={<Dining />} />
