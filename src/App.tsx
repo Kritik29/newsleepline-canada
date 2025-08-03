@@ -33,7 +33,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <Router basename={process.env.NODE_ENV === 'production' ? '/newsleepline-canada' : ''}>
+        <Router>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/shop" element={<Shop />} />
