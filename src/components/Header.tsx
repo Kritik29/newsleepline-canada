@@ -18,12 +18,12 @@ const Header = () => {
   };
 
   const navigationLinks = [
-    { to: "/", label: "Home" },
+    { to: "/", label: "Shop" },
+    { to: "/all", label: "All Products" },
     { to: "/beds", label: "Beds" },
     { to: "/sofas", label: "Sofas" },
     { to: "/dining", label: "Dining" },
     { to: "/more", label: "More" },
-    { to: "/shop", label: "All Products" },
   ];
 
   return (
