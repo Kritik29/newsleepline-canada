@@ -64,7 +64,7 @@ const ProductDetail = () => {
       "beds": "/beds",
       "sofas": "/sofas", 
       "dining": "/dining",
-      "office-furniture": "/office-furniture",
+      "officefurniture": "/office-furniture",
       "living-room": "/living-room",
       "bedroom": "/bedroom",
       "storage": "/storage",

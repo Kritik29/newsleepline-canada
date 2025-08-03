@@ -11,7 +11,7 @@ const ProductCarousel = () => {
   // Create carousel products by taking one from each category
   useEffect(() => {
     const categories = [
-      "office", "beds", "sofas", "dining", "office-furniture", 
+      "office", "beds", "sofas", "dining", "officefurniture", 
       "living-room", "bedroom", "storage", "lighting", "decor",
       "mirrors", "coffee-tables", "console-tables", "accents", 
       "accessories", "entertainment"

@@ -3,7 +3,7 @@ import ProductCard from "@/components/ProductCard";
 import { getProductsByCategory } from "@/data/products";
 
 const OfficeFurniture = () => {
-  const officeFurnitureProducts = getProductsByCategory("office-furniture");
+  const officeFurnitureProducts = getProductsByCategory("officefurniture");
 
   return (
     <div className="min-h-screen bg-clean-white">
@@ -20,6 +20,8 @@ const OfficeFurniture = () => {
               image={product.image}
               title={product.title}
               isNew={product.isNew}
+              isTopSeller={product.isTopSeller}
+              isCanadianMade={product.isCanadianMade}
             />
           ))}
         </div>

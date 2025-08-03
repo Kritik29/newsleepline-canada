@@ -23,7 +23,7 @@ const More = () => {
     },
     { 
       title: "Accents", 
-      description: "Accent chairs",
+      description: "Accent chairs to spice up your space",
       route: "/accents"
     },
     { 
