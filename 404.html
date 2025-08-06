@@ -81,7 +81,7 @@
             height: 100%;
             background-color: #dc2626;
             border-radius: 2px;
-            animation: progress 2s ease-in-out infinite;
+            animation: progress 1s ease-in-out infinite;
         }
         
         @keyframes progress {
@@ -120,12 +120,12 @@
         if (window.location.pathname === '/shop') {
             setTimeout(function() {
                 window.location.href = '/';
-            }, 600); // Very fast redirect - 0.6 seconds
+            }, 1000); // Very fast redirect - 0.6 seconds
         } else {
             // For other 404s, show the loading screen briefly then go to home
             setTimeout(function() {
                 window.location.href = '/';
-            }, 800);
+            }, 1200);
         }
         
         // Prevent back button issues by replacing history
