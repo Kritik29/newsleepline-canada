@@ -116,16 +116,21 @@
     </div>
     
     <script>
-        // Immediate redirect for /shop URLs
+        // Only redirect /shop URLs to home page
         if (window.location.pathname === '/shop') {
             setTimeout(function() {
                 window.location.href = '/';
-            }, 1500); // 1.5 second delay for natural loading feel
+            }, 600); // Very fast redirect - 0.6 seconds
         } else {
-            // For other 404s, redirect after 2 seconds
+            // For other 404s, show the loading screen briefly then go to home
             setTimeout(function() {
                 window.location.href = '/';
-            }, 2000);
+            }, 800);
+        }
+        
+        // Prevent back button issues by replacing history
+        if (window.location.pathname === '/shop') {
+            window.history.replaceState(null, '', '/');
         }
     </script>
 </body>
