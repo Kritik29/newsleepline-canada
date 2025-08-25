@@ -62,6 +62,10 @@ import aitana1632dw from "@/assets/products/beds/48-aitana1632dw.avif";
 import waterlyn1639 from "@/assets/products/beds/49-waterlyn1639.avif";
 import davi1645 from "@/assets/products/beds/50-davi1645.avif";
 import avondale1646 from "@/assets/products/beds/51-avondale1646.avif";
+import ellwhite from "@/assets/products/beds/52-ELL-white.avif";
+import ellbrown from "@/assets/products/beds/53-ELL-brown.avif";
+import b10251 from "@/assets/products/beds/54-B102-51.avif";
+import b10259r from "@/assets/products/beds/55-B102-59R.avif";
 
 //import office furniture
 import style1 from "@/assets/products/office-furniture/1.avif";
@@ -275,6 +279,10 @@ export const allProducts: Product[] = [
   { id: "62", title: "Waterlyn 1639", image: waterlyn1639, isNew: true, category: "beds", description: "Modern traditional framing is utilized to create the look of the Waterlyn Collection. The high wing-back design of the fully upholstered bed features neutral toned fabric accented with profile-defining nail head trim and pleated button tufting, solidifying the traditional look of this bed offering."}, 
   { id: "63", title: "Davi 1645", image: davi1645, category: "beds", description: "The modern styling of the Davi Collection is achieved by blending the natural look of wood grain and the clean lines of contemporary design to create a unique bedroom group that will fit right in with your home's aesthetic. The defining lines of the distinct framing of the collection effectively accent the printed wood grain on melamine veneer. Providing complementing contrast are the nickel-finished, metal, fixed drawer pulls."}, 
   { id: "64", title: "Avondale 1646", image: avondale1646, isNew: true, category: "beds", description: "The reflection of your glamorous image is one of striking style and classic sophistication, all illuminate by the boldly designed Avondale Collection. Mirrored framing immediately draws your eye to the modern-traditional profile of the case goods and bed as do the clipped corners on the bed mirror and vanity."}, 
+  { id: "176", title: "B102-51 (Kids' Bed)", image: b10251, category: "beds", description: "Replicated white paint. Grooved panels and embossed bead framing drawers. Rolling trundle storage box enables the option of storage or bed. Side roller glides for smooth operating drawers. Twin (52) and full (87) headboards can attach to a bolt-on metal bed frame B100-21. B100-11, B100-12 roll slats can be used in substitution of a box spring on the twin or full panel beds. B102-59X can be set up as (2) twin beds. Delivery available across GTA."},
+  { id: "177", title: "B102-59R (Kids' Bed)", image: b10259r, category: "beds", description: "Replicated white paint. Grooved panels and embossed bead framing drawers. Rolling trundle storage box enables the option of storage or bed. Side roller glides for smooth operating drawers. Twin (52) and full (87) headboards can attach to a bolt-on metal bed frame B100-21. B100-11, B100-12 roll slats can be used in substitution of a box spring on the twin or full panel beds. B102-59X can be set up as (2) twin beds. Delivery available across GTA."},
+  { id: "174", title: "ELL White (Kids' Bed)", image: ellwhite, category: "beds", description: "Beautiful kids collection with crystal detaling and carving."},
+  { id: "175", title: "ELL Brown (Kids' Bed)", image: ellbrown, category: "beds", description: "Beautiful well made solid wood bed with leather tufted head board"},
 
     // Sofa Products
   { id: "65", title: "Boston - XC", image: xcboston, category: "sofas", isCanadianMade: true, description: "Be unique. Ultra stylish sofa, fit for the 21st century. Ivory colour fabric with five pillows. Matte gold stainless steel base."},
@@ -298,7 +306,7 @@ export const allProducts: Product[] = [
   { id: "83", title: "Eloy Dark Blue - WW", image: wweloyblue, category: "sofas", description: "Ultra modern sofa that turns into a bed when you need it! Available in Dark Blue and Grey. 67\" in length."},
   { id: "84", title: "Eloy Grey - WW", image: wweloygrey, category: "sofas", description: "Ultra modern sofa that turns into a bed when you need it! Available in Dark Blue and Grey. 67\" in length."},
   { id: "85", title: "Tyson Sectional - WW", image: wwtyson, category: "sofas", description: "Super cozy and comfy, this sectional sofa has built in storage! 93.25\" in length. Available in Charcoal."},
-
+  
 
   // Dining Products
   { id: "86", title: "2430 - VF", image: vf2430, category: "dining", isNew: false, description: "Six chairs and table, brown solid wood with leather seating dinning set. Delivery Available." },
